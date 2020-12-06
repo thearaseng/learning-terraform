@@ -4,7 +4,9 @@ provider "aws" {
   shared_credentials_file = "./credentials"
 }
 
-resource "aws_s3_bucket" "tf_course" {
+resource "aws_s3_bucket" "prod_tf_course" {
   bucket = "tf-theara"
   acl    = "private"
 }
+
+resource "aws_default_vpc" "default" {}
